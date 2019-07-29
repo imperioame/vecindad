@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP2: Vecindad</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="img/espada.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="copyright" content="© Distrito Gráfico">
+    <!-- www.distritografico.com.ar -->
+    
+    <!-- versión 1.2 - al 30/07/18 -->
+    
+</head>
+
+<body>
+
+
+
+    <!-- 
+   VECINDAD:
+   un juego de rol hecho en menos de una semana.
+   
+   Bienvenido y espero que te guste.
+   Perdón por los bugs!
+    
+      -->
+
+
+
+    <audio src="audio/musica.mp3" loop></audio>
+    <!-- audio original https://www.youtube.com/watch?v=DMMVTf_deUw -->
+
+    <div id="boton_mute"><img src="img/mute_rojo.svg" alt="Silenciar música"></div>
+
+    <!-- Inciio Fondo estrellado -->
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <!-- FIN Fondo estrellado -->
+
+    <!-- Incio Intro -->
+
+    <div id="intro">
+        <p id="intro_primera_linea">Por cientos de años</p>
+        <p id="intro_segunda_linea">las tierras de Rudonia estuvieron en paz...</p>
+
+        <p id="intro_tercera_linea">... Hasta el día</p>
+        <p id="intro_cuarta_linea">en que llegaron los bárbaros.</p>
+
+        <p id="pie_de_intro">presiona cualquier tecla para continuar</p>
+
+    </div>
+
+    <!-- Fin Intro -->
+
+    <!-- Incio Pantalla de incio -->
+    <div id='title'>
+        <h1>
+            VECINDAD:
+        </h1>
+        <h2>
+            Un juego de estrategias militares.
+        </h2>
+    </div>
+
+    <div class="botoneras_inicio">
+        <div class="botonera_cantidad_jugadores">
+            <h3>Elegí cantidad de oponentes</h3>
+            <p>(mínimo de 1 oponente)</p>
+            <input type="button" value="1 Oponente" id="un_oponente">
+            <input type="button" value="2 Oponentes" id="dos_oponentes">
+            <input type="button" value="3 Oponentes" id="tres_oponentes">
+        </div>
+
+        <!-- no hace falta un botón de "inicio", resulta contraintuitivo -->
+        <!-- <div class="boton_inicio"><input type="button" value="Iniciar juego"></div> -->
+    </div>
+    <!-- Fin Pantalla de inicio -->
+
+    <div class="instructivo">
+
+        <div class="fila">
+            <h2 id="bienvenida">Bienvenido al juego.</h2>
+            <h3 id="instructivo">Este es un breve instructivo:</h3>
+        </div>
+
+        <div class="fila">
+            <p>Vecindad es un juego de rol por <strong>turnos</strong>. <br> Al comienzo de cada turno obtienes <strong>oro</strong>, con el que puedes comprar <b>soldados</b> o <b>minas de oro</b></p>
+            <p>El objetivo es <strong>vencer en combate</strong> a tus oponentes... <br> ...Y destruir sus <b>ciudades</b></p>
+
+            <p><i>Para vencer definitivamente a tus oponentes, primero debes destruir su ciudad (posicionando a tu personaje sobre la ciudad oponente) <br> y luego vencer en batalla al personaje.</i></p>
+
+        </div>
+        <hr>
+        <div class="fila">
+            <h2>Tipos de terreno:</h2>
+            <h3>Ejemplos de espacios Navegables:</h3>
+            <img src="img/arena_planicie.png" alt="Ejemplo de una planicie" title="Este es un espacio navegable">
+            <img src="img/arena_semiocupado.png" alt="Ejemplo de un terreno semiocupado" title="Este es un espacio navegable">
+            <img src="img/nieve_planicie.png" alt="Ejemplo de una planicie" title="Este es un espacio navegable">
+            <img src="img/nieve_semiocupado.png" alt="Ejemplo de un terreno semiocupado" title="Este es un espacio navegable">
+            <img src="img/verde_planicie.png" alt="Ejemplo de una planicie" title="Este es un espacio navegable">
+            <img src="img/verde_semiocupado.png" alt="Ejemplo de un terreno semiocupado" title="Este es un espacio navegable">
+        </div>
+        <div class="fila">
+            <h3>Ejemplos de espacios NO Navegables:</h3>
+            <img src="img/arena_ocupado.png" alt="Ejemplo de un terreno no navegable" title="Este es un espacio NO navegable">
+            <img src="img/nieve_ocupado.png" alt="Ejemplo de un terreno no navegable" title="Este es un espacio NO navegable">
+            <img src="img/verde_ocupado.png" alt="Ejemplo de un terreno no navegable" title="Este es un espacio NO navegable">
+        </div>
+        <div class="fila">
+            <h3>Ejemplos de Ciudades:</h3>
+            <img src="img/arena_ciudad.png" alt="Ejemplo de una Ciudad" title="Esta es una Ciudad de un jugador">
+            <img src="img/nieve_ciudad.png" alt="Ejemplo de una Ciudad" title="Esta es una Ciudad de un jugador">
+            <img src="img/verde_ciudad.png" alt="Ejemplo de una Ciudad" title="Esta es una Ciudad de un jugador">
+        </div>
+
+        <div class="fila">
+
+            <h1>Usted comienza en:</h1>
+            <h2 id="donde_comienzo"></h2>
+
+        </div>
+
+        <hr>
+
+        <div class="fila info_final">
+            <h4>La interfáz es simple...</h4>
+            <p>En el panel derecho están las acciones y datos del turno <br> En espacio principal se encuentra el tablero. <br> Presionando <strong>TAB</strong> podrá volver a ver esta pantalla.</p>
+            <h5>(Ah!, ojo que tiene algunos bugs...)</h5>
+            <p><strong>Tocá cualquier botón para empezar a jugar...</strong></p>
+        </div>
+
+        <div id="bloque_de_aire_para_el_espaciado">
+            <hr>
+        </div>
+
+    </div>
+    
+    <!-- Inicio Pantalla de Juego -->
+    <div class="ventana_tablero">
+
+
+    </div>
+    <div class="panel_lateral">
+        <div class="recursos">
+            <div class="tiempo_de_juego">
+                <p></p>
+            </div>
+            <div class="poder">
+                <img src="img/espada.png" alt="Imagen de una espada que representa poderío militar" title="Poder">
+                <p>Poder: </p>
+                <p style="font-size: 1.3em; color: #48689b"></p>
+            </div>
+            <div class="oro">
+                <img src="img/moneda.png" alt="Imagen de una moneda de oro que representa el oro obtenido" title="Oro">
+                <p>Oro: </p>
+                <p style="font-size: 1.3em; color: #48689b"></p>
+            </div>
+            <div class="minas_de_oro">
+                <img src="img/pica.png" alt="Imagen de un pica que representa las minas de oro con las que se cuenta" title="Minas de Oro">
+                <p>Minas: </p>
+                <p class="num_minas"></p>
+                <p>/10</p>
+            </div>
+        </div>
+
+        <div class="visualizador_dado">
+            <p>Movimientos:</p>
+            <img src="img/dado.png" alt="imagen de un dado">
+            <h2></h2>
+        </div>
+
+        <div class="botonera_juego">
+            <div class="botonera_juego_recursos">
+                <input id="compra_oro" type="button" value="Comprar Mina de oro">
+                <input id="compra_soldado" type="button" value="Comprar Soldado">
+            </div>
+            <div class="botonera_juego_acciones">
+                <input id="dado_mov_jugador" type="button" value="Tirar dado">
+                <input id="pasar_turno" type="button" value="Pasar turno">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/js_juego.js"></script>
+</body>
+
+</html>

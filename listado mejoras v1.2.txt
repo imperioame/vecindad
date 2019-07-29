@@ -1,0 +1,35 @@
+Diseño de intro:
+
+HECHO- Hacer intro:  -- Fade in :Breve explicación del porqué del juego (historia) : Fade Out---- Fade in: Título del juego. - se desplaza a la parte superior --- Fade in: entra la botonéra de inicio.
+Debe poder ser salteable.
+
+
+Botonera de inicio:
+HECHO - seleccion de cant de oponentes: Fade out ---- Fade in: Selección de heroe: Fade Out ---- Fade in tablero + instructivo (tutorial)
+
+Jugabilidad:
+HECHO - Que el usuario elija su personaje
+
+HECHO - Mejorar tutorial
+Hecho - Agregar reloj de tiempo de juego
+Hecho -Agregar contador de minas de oro (x/10)
+Hecho - Modificar el contador de oro para que muestre decimales
+Hecho - Ajustar tamaño de grilla del juego y jugadores
+- Estilizar botones
+- Highlight cuando se posicione el mouse sobre una posición transitable - y oscurecimiento cuando se posicione el mouse sobre una NO trasitable
+Hecho - que las posiciones permitidas cambien el cursor a "manito" (en css: cursor: pointer; )
+- Mejorar interface de usuario - que sea más usable
+Hecho - al apretar tab se muestre el tutorial
+- Estadisticas al finalizar el juego
+- Hacer que se pueda clickear a un jugador oponente y el personaje del usuario se pueda mover ahi
+Hecho - Ver que cuando se genere una batalla también actualice la en pantalla la cantidad de poder
+
+
+Adicionales y mejorías:
+- Evaluar de programar el movimiento por flechitas
+Hecho - Hacer fog of war
+- Evaluar si poder restricciones de subtipo al crear el tablero (para no encerrar jugadores)
+- Mejorar la AI:  Agregarle función de pathfinding
+Hecho - Evaluar la posibilidad de que el dado tenga más valores
+- Intentar eficientizar el código - Modular en funciones lo que se pueda
+
