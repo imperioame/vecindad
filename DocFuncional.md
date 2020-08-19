@@ -120,31 +120,31 @@ Array de arrays: 20 elementos por array principal, 20 por array secundario
 
 ---
 ## "INTELIGENCIA ARTIFICIAL"
-	- Por azar, 
-	- dos dados, uno de compra, uno de acción
-		- Dado de compra:
-			- Si el dado de compra sale 0 o 1, compra un soldado
-			- Si el dado de compra sale 2 o 3 o 4, compra una mina de oro
-			- Si el dado de compra sale 5, no compra nada
-                        - Si el dado de compra sale 0, 1, 2, 3, o 4, pero no tiene oro suficiente para comprar, no compra nada.
-		- Dado de acción:
-			- Si el dado de acción sale 0, se mueve al azar:
-				- Para moverse tira otro dado del 1 al 3, esa es la cantidad de lugares que se va a mover
-				- Para saber donde moverse, tira otro dado del 1 al 4, por cantidad de lugares a moverse.
-			- Si el dado de acción sale 1 o 2, se mueve hacia el oponente
-				- Para moverse tira otro dado del 1 al 3, esa es la cantidad de lugares que se va a mover
-				- Si hay múltiples jugadores, tira un dado del 1 al la cantidad de jugadores.
-					- Si sale 0, se moverá hacia el usuario
-					- Si sale otro valor, se moverá hacia el jugador que le corresponda en número
-				- Buscará la posición matricial de donde se ubique el jugador
-					-Llama a la función de pathfinding para trazar el camino
-			- Si el dado de acción sale 3, no realiza movimiento y pasa el turno.
-	- Al lanzar ambos dados y finalizar las acciones, le toca al siguiente jugador
 
--Función pathfinding:
+- Por azar
+- Dos dados, uno de compra, uno de acción
+	- Dado de compra:
+		- Si el dado de compra sale 0 o 1, compra un soldado
+		- Si el dado de compra sale 2 o 3 o 4, compra una mina de oro
+		- Si el dado de compra sale 5, no compra nada
+		- Si el dado de compra sale 0, 1, 2, 3, o 4, pero no tiene oro suficiente para comprar, no compra nada.
+	- Dado de acción:
+		- Si el dado de acción sale 0, se mueve al azar:
+			- Para moverse tira otro dado del 1 al 3, esa es la cantidad de lugares que se va a mover
+			- Para saber donde moverse, tira otro dado del 1 al 4, por cantidad de lugares a moverse.
+		- Si el dado de acción sale 1 o 2, se mueve hacia el oponente
+			- Para moverse tira otro dado del 1 al 3, esa es la cantidad de lugares que se va a mover
+			- Si hay múltiples jugadores, tira un dado del 1 al la cantidad de jugadores.
+				- Si sale 0, se moverá hacia el usuario
+				- Si sale otro valor, se moverá hacia el jugador que le corresponda en número
+			- Buscará la posición matricial de donde se ubique el jugador
+				-Llama a la función de pathfinding para trazar el camino
+		- Si el dado de acción sale 3, no realiza movimiento y pasa el turno.
+- Al lanzar ambos dados y finalizar las acciones, le toca al siguiente jugador
+
+- Función pathfinding:
 	- registra en un array el camino que haría moviendose primero en forma horizontal y luego vertical
 	- Depura ese array buscando la forma con menos nodos.
-
 	-La función recibe la posición del oponente seleccionado
 	-Registra en un array las coordenadas del camino de la siguiente forma:
 		- Por cada columna hasta la columna del usuario o encontrar un subtipo de terreno ocupado
@@ -180,17 +180,17 @@ No hay: aplicación de azar al poderío militar en combate (el calculo es direct
 ---
 ## Condiciones de victoria
 Gana quien quede solo:
-	- Si el usuario gana:
-		- Se emite cartel de victoria
-		- Se informa estadisticas:
-			- Se informa la cantidad de batallas ganadas
-			- Se informa la cantidad de batallas perdidas
-			- Se informa cantidad de oro recolectado
-			- Se informa ejercito máximo alcanzado
-			- Se realiza un promedio de estos valores
-				- Se muestra y compara el promedio de puntaje de todos los jugadores.
-	- Si el usuario no gana:
-		- Al perder se le da la posibilidad de terminar con el juego y volver a la pantalla inicial.
-			- Si elije no terminar con el juego:
-				- Se continua con el juego hasta obtener un ganador
-				- Se informa las estadísticas del ganador.
+- Si el usuario gana:
+	- Se emite cartel de victoria
+	- Se informa estadisticas:
+		- Se informa la cantidad de batallas ganadas
+		- Se informa la cantidad de batallas perdidas
+		- Se informa cantidad de oro recolectado
+		- Se informa ejercito máximo alcanzado
+		- Se realiza un promedio de estos valores
+			- Se muestra y compara el promedio de puntaje de todos los jugadores.
+- Si el usuario no gana:
+	- Al perder se le da la posibilidad de terminar con el juego y volver a la pantalla inicial.
+		- Si elije no terminar con el juego:
+			- Se continua con el juego hasta obtener un ganador
+			- Se informa las estadísticas del ganador.
