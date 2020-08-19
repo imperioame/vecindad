@@ -1,8 +1,9 @@
-Juego de rol "Vecindad"
-Sinopsis: Sos un emperador en un  país en conflicto, tenes que defender tu castillo ante los emperadores enemigos.
-Inicias  es una ciudad tenes que conquistar las otras ciudades con tu heroe. 
+# Juego de rol "Vecindad"
+## Sinopsis:
+> Sos un emperador en un  país en conflicto, tenes que defender tu castillo ante los emperadores enemigos.
+> Inicias  es una ciudad tenes que conquistar las otras ciudades con tu heroe. 
 
---------------ESTRUCTURAS DE DATOS
+# ESTRUCTURAS DE DATOS
 - Terrenos
 Array de arrays: Array principal de 3 elementos (uno por tipo de terreno), array secundario de 4 elementos.
 en el sub array se encuentran cada variante de del terreno
@@ -20,8 +21,7 @@ Array de arrays: 20 elementos por array principal, 20 por array secundario
 (Esta sección está incompleta, ver los comentarios de la hoja de javascript)
 
 
---------------REGLAS
-
+# REGLAS
 - Reglas del tablero:
 	- Matriz 20*20
 	- Tipos de terreno de terreno:
@@ -118,8 +118,8 @@ Array de arrays: 20 elementos por array principal, 20 por array secundario
 - Se comienza con 0 de poder
 
 
----------------------------------------------
-- "INTELIGENCIA ARTIFICIAL"
+---
+## "INTELIGENCIA ARTIFICIAL"
 	- Por azar, 
 	- dos dados, uno de compra, uno de acción
 		- Dado de compra:
@@ -157,12 +157,12 @@ Array de arrays: 20 elementos por array principal, 20 por array secundario
 							- Se desplaza a una fila anterior
 							- Vuelve a consultar por camino alternativo 
 		 
-MEJORAR ESTE CONDICIONAL
+ ***MEJORAR ESTE CONDICIONAL***
 
 
 
----------------------------------------
-- COMBATE
+---
+## COMBATE
 
 No hay: aplicación de azar al poderío militar en combate (el calculo es directo)
 
@@ -177,9 +177,9 @@ No hay: aplicación de azar al poderío militar en combate (el calculo es direct
 
 
 
-
-
-- Gana quien quede solo:
+---
+## Condiciones de victoria
+Gana quien quede solo:
 	- Si el usuario gana:
 		- Se emite cartel de victoria
 		- Se informa estadisticas:
