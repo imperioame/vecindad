@@ -166,14 +166,14 @@ Array de arrays: 20 elementos por array principal, 20 por array secundario
 
 No hay: aplicación de azar al poderío militar en combate (el calculo es directo)
 
-	- Se hace una diferencia entre la cantidad de soldados de cada combatiente
-		- El ganador de la batalla es quien tenga más soldados
-                - Si ambos tienen el mismo poder, ambos vuelven a la base con 0 poder.
-	- Si un personaje se posiciona sobre una ciudad:
-		- Si No hay personaje oponente sobre la ciudad, la destruye.
-                      - Cambia el subtipo de terreno a semiocupado
-                      - Elimina la posición de la ciudad del vector de ciudades.
-		- Si hay personaje oponente hay combate.
+- Se hace una diferencia entre la cantidad de soldados de cada combatiente
+	- El ganador de la batalla es quien tenga más soldados
+	- Si ambos tienen el mismo poder, ambos vuelven a la base con 0 poder.
+- Si un personaje se posiciona sobre una ciudad:
+	- Si No hay personaje oponente sobre la ciudad, la destruye.
+		- Cambia el subtipo de terreno a semiocupado
+		- Elimina la posición de la ciudad del vector de ciudades.
+	- Si hay personaje oponente hay combate.
 
 
 
