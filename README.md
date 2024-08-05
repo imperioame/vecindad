@@ -1,3 +1,5 @@
+![portada_vecindad copy](https://github.com/user-attachments/assets/1c639d75-db30-41ca-9b7d-7a4c291cb0aa)
+
 # Vecindad
 ## Sinópsis
 Juego web de estrategia por turnos, hecho en JQuery.
